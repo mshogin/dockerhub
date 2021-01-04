@@ -16,7 +16,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install \
   cmake \
   debhelper \
   devscripts dh-systemd \
-  python3 python3-pip
+  python3 python3-pip curl
 
 #: add support building documentation
 RUN pip3 install Sphinx sphinx-rtd-theme
