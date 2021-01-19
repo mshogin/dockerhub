@@ -29,6 +29,7 @@ COPY --from=go /usr/local/go /usr/local/
 ENV PATH="/usr/local/go/bin:$PATH"
 
 COPY entrypoint.sh /
+RUN chmod a+x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["dpkg-buildpackage", "-us", "-uc", "-b"]
